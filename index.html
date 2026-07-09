@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Planner：癒やしの天気予報＆おみくじ - 公式サイト</title>
     
+    <!-- SEO & Indexing (広告なしの文言を削除済) -->
     <meta name="description" content="天気予報と運勢占いが融合した、新しいスタイルの癒やし系お天気アプリ「Weather Planner」。毎日の服装アドバイスからおみくじまで、そらちゃんが優しくサポートします。個人情報収集なしの安心ローカル設計。">
-    <meta name="keywords" content="天気予報,お天気アプリ,おみくじ,癒やし,そらちゃん,無料アプリ,広告なし,Androidアプリ">
+    <meta name="keywords" content="天気予報,お天気アプリ,おみくじ,癒やし,そらちゃん,無料アプリ,Androidアプリ">
     <meta name="author" content="BeePub">
     
+    <!-- OGP (SNSシェア用設定) -->
     <meta property="og:title" content="Weather Planner：癒やしの天気予報＆おみくじ">
     <meta property="og:description" content="そらちゃんが毎日の天気と運勢を教えてくれる、癒やし系お天気アプリ。あなたの毎日に小さな癒やしと確かな予報を。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://appbee1010-a11y.github.io/Weather-Planner-privacy/">
-    <meta property="og:image" content="https://appbee1010-a11y.github.io/Weather-Planner-privacy/ogp.png">
+    <meta property="og:image" content="https://appbee1010-a11y.github.io/Weather-Planner-privacy/1.jpg">
     <meta property="og:site_name" content="Weather Planner 公式サイト">
     <meta name="twitter:card" content="summary_large_image">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 
+    <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -48,7 +52,6 @@
     <style>
         body { font-family: 'Noto Sans JP', sans-serif; }
         h1, h2, h3, .font-rounded { font-family: 'M PLUS Rounded 1c', sans-serif; }
-        /* ふんわり浮き上がるアニメーション */
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
@@ -58,6 +61,7 @@
 </head>
 <body class="bg-gradient-to-b from-sky-50 via-white to-sky-50 text-slate-700 antialiased selection:bg-sky-200">
 
+    <!-- ヘッダー -->
     <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-sky-100 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
             <div class="flex items-center gap-2">
@@ -70,6 +74,7 @@
         </div>
     </header>
 
+    <!-- Heroセクション -->
     <section class="pt-32 pb-20 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
         <div class="flex-1 text-center md:text-left">
             <div class="inline-block bg-sky-100 text-sky-800 font-medium px-4 py-1.5 rounded-full text-sm mb-6 shadow-sm font-rounded">
@@ -92,26 +97,29 @@
                         <div class="text-lg font-bold leading-tight mt-0.5 font-sans">Google Play</div>
                     </div>
                 </a>
-                <span class="text-xs text-slate-400">※全国47都道府県対応 </span>
+                <span class="text-xs text-slate-400">※全国47都道府県対応 / 基本無料</span>
             </div>
         </div>
+        <!-- Hero画像: 1.jpg -->
         <div class="flex-1 flex justify-center">
             <div class="relative w-72 md:w-80 animate-float">
                 <div class="absolute -inset-4 bg-sky-200/50 rounded-3xl blur-2xl -z-10"></div>
-                <div class="bg-white p-3 rounded-[2.5rem] shadow-2xl border-4 border-white">
-                    <div class="bg-sky-50 aspect-[9/19] rounded-[2rem] flex items-center justify-center text-center p-6 text-sky-400 font-medium border border-sky-100">
-                        📱 [スクリーンショット1<br>ホーム画面モック]<br><br>※画像を入れ替えてください
-                    </div>
-                </div>
+                <img src="1.jpg" alt="ホーム画面" class="rounded-[2.5rem] w-full shadow-2xl border-4 border-white">
             </div>
         </div>
     </section>
 
+    <!-- ゆるキャラ紹介セクション -->
     <section class="py-20 bg-white border-y border-sky-100">
         <div class="max-w-5xl mx-auto px-4 text-center">
             <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4">お天気マスコット「そらちゃん」が毎日を応援！</h2>
-            <p class="text-slate-600 max-w-2xl mx-auto mb-12">天気インデックスと連動して、紫外線、お洗濯、花粉、傘、服装など、その日の気象状況に応じてイラストと優しさいっぱいのアドバイスが変化します。</p>
+            <p class="text-slate-600 max-w-2xl mx-auto mb-10">天気インデックスと連動して、紫外線、お洗濯、花粉、傘、服装など、その日の気象状況に応じてイラストと優しさいっぱいのアドバイスが変化します。</p>
             
+            <!-- フレンズ集合画像: 1 (5).jpg -->
+            <div class="flex justify-center mb-12">
+                <img src="1 (5).jpg" alt="そらちゃんお天気フレンズ" class="rounded-[2rem] shadow-lg max-w-sm w-full border-4 border-sky-50">
+            </div>
+
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-sky-50/70 p-8 rounded-3xl border border-sky-100 relative overflow-hidden group hover:shadow-lg transition-all">
                     <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform">👕✨</div>
@@ -132,55 +140,55 @@
         </div>
     </section>
 
+    <!-- 使用シーン (スクリーンショット4枚ギャラリー) -->
     <section class="py-20 max-w-6xl mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4">快適で美しい、こだわりのアプリ画面</h2>
-            <p class="text-slate-600">直感的でストレスのない Material Design 3 のモダンなUI。</p>
+            <p class="text-slate-600">直感的でストレスのないモダンなUI。</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="bg-white p-4 rounded-3xl shadow-md border border-sky-100 flex flex-col items-center">
-                <div class="bg-sky-50 w-full aspect-[9/19] rounded-2xl mb-4 flex items-center justify-center text-xs text-sky-400 text-center p-2">
-                    📱 [モック画像 1]<br>ホーム画面
-                </div>
+            <!-- スクショ1: ホーム画面 (1.jpg) -->
+            <div class="bg-white p-4 rounded-3xl shadow-md border border-sky-100 flex flex-col items-center hover:shadow-lg transition-shadow">
+                <img src="1.jpg" alt="ホーム画面" class="w-full rounded-[1.5rem] mb-4 shadow-sm border border-sky-50">
                 <h4 class="font-bold text-sm text-slate-700">ひと目でわかる快適ホーム</h4>
             </div>
-            <div class="bg-white p-4 rounded-3xl shadow-md border border-sky-100 flex flex-col items-center">
-                <div class="bg-sky-50 w-full aspect-[9/19] rounded-2xl mb-4 flex items-center justify-center text-xs text-sky-400 text-center p-2">
-                    📱 [モック画像 2]<br>おみくじ・そらちゃん
-                </div>
+            <!-- スクショ2: おみくじ機能 (1 (4).jpg) -->
+            <div class="bg-white p-4 rounded-3xl shadow-md border border-sky-100 flex flex-col items-center hover:shadow-lg transition-shadow">
+                <img src="1 (4).jpg" alt="おみくじ機能" class="w-full rounded-[1.5rem] mb-4 shadow-sm border border-sky-50">
                 <h4 class="font-bold text-sm text-slate-700">楽しいおみくじ機能</h4>
             </div>
-            <div class="bg-white p-4 rounded-3xl shadow-md border border-sky-100 flex flex-col items-center">
-                <div class="bg-sky-50 w-full aspect-[9/19] rounded-2xl mb-4 flex items-center justify-center text-xs text-sky-400 text-center p-2">
-                    📱 [モック画像 3]<br>詳細データ
-                </div>
+            <!-- スクショ3: 詳細データ (1 (2).jpg) -->
+            <div class="bg-white p-4 rounded-3xl shadow-md border border-sky-100 flex flex-col items-center hover:shadow-lg transition-shadow">
+                <img src="1 (2).jpg" alt="詳細データ" class="w-full rounded-[1.5rem] mb-4 shadow-sm border border-sky-50">
                 <h4 class="font-bold text-sm text-slate-700">信頼できる正確なデータ</h4>
             </div>
-            <div class="bg-white p-4 rounded-3xl shadow-md border border-sky-100 flex flex-col items-center">
-                <div class="bg-sky-50 w-full aspect-[9/19] rounded-2xl mb-4 flex items-center justify-center text-xs text-sky-400 text-center p-2">
-                    📱 [モック画像 4]<br>通知設定
-                </div>
+            <!-- スクショ4: 通知設定 (1 (3).jpg) -->
+            <div class="bg-white p-4 rounded-3xl shadow-md border border-sky-100 flex flex-col items-center hover:shadow-lg transition-shadow">
+                <img src="1 (3).jpg" alt="通知設定" class="w-full rounded-[1.5rem] mb-4 shadow-sm border border-sky-50">
                 <h4 class="font-bold text-sm text-slate-700">心地よい通知設定</h4>
             </div>
         </div>
     </section>
 
+    <!-- 通知機能・安心設計セクション (広告なし記載を削除) -->
     <section class="py-16 bg-gradient-to-r from-sky-600 to-sky-700 text-white my-10">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-2xl md:text-3xl font-bold mb-6">必要なときだけ、あなたへ。安心のローカル設計。</h2>
             <p class="text-sky-100 leading-relaxed max-w-2xl mx-auto mb-8">
                 外部への不要な通信や重いAI処理を行わず、端末内でスマートに処理を行います。<br>
-                個人情報の収集は一切なし。さらに<strong>「完全広告なし」</strong>なので、起動も一瞬で驚くほど軽快。<br>
+                個人情報の収集は一切なし。起動も一瞬で驚くほど軽快。<br>
                 毎朝7時、お出かけに必要な服装や傘の目安だけを、心地よいタイミングでお知らせします。
             </p>
             <div class="inline-flex flex-wrap justify-center gap-4 text-sm font-medium">
                 <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">🔒 個人情報収集ゼロ</span>
-                              <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">🔔 押し付けない行動提案通知</span>
+                <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">⚡ サクサク軽快な動作</span>
+                <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">🔔 押し付けない行動提案通知</span>
             </div>
         </div>
     </section>
 
+    <!-- フッター -->
     <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
         <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-center gap-2">
@@ -188,11 +196,13 @@
                 <span class="font-rounded font-bold text-lg text-white">Weather Planner</span>
             </div>
 
+            <!-- リンク群 -->
             <div class="flex flex-wrap justify-center gap-6 text-slate-300">
                 <a href="https://appbee1010-a11y.github.io/Weather-Planner-privacy/" class="hover:text-sky-400 transition-colors">プライバシーポリシー</a>
                 <a href="mailto:appbee1010@gmail.com" class="hover:text-sky-400 transition-colors">お問い合わせ</a>
             </div>
 
+            <!-- SNSシェアボタン -->
             <div class="flex items-center gap-4">
                 <span class="text-xs text-slate-500">シェア:</span>
                 <a href="https://twitter.com/intent/tweet?text=そらちゃんが毎日の天気と運勢を教えてくれる癒やし系お天気アプリ！%20%23WeatherPlanner&url=https://appbee1010-a11y.github.io/Weather-Planner-privacy/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-slate-800 hover:bg-sky-500 text-white rounded-full flex items-center justify-center transition-colors shadow-sm" title="Xでシェア">
