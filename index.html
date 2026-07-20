@@ -1,222 +1,93 @@
-<!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Planner：癒やしの天気予報＆おみくじ - 公式サイト</title>
-    
-    <!-- SEO & Indexing (広告なしの文言を削除済) -->
-    <meta name="description" content="天気予報と運勢占いが融合した、新しいスタイルの癒やし系お天気アプリ「Weather Planner」。毎日の服装アドバイスからおみくじまで、そらちゃんが優しくサポートします。個人情報収集なしの安心ローカル設計。">
-    <meta name="keywords" content="天気予報,お天気アプリ,おみくじ,癒やし,そらちゃん,無料アプリ,Androidアプリ">
-    <meta name="author" content="BeePub">
-    
-    <!-- OGP (SNSシェア用設定) -->
-    <meta property="og:title" content="Weather Planner：癒やしの天気予報＆おみくじ">
-    <meta property="og:description" content="そらちゃんが毎日の天気と運勢を教えてくれる、癒やし系お天気アプリ。あなたの毎日に小さな癒やしと確かな予報を。">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://appbee1010-a11y.github.io/Weather-Planner-privacy/">
-    <meta property="og:image" content="https://appbee1010-a11y.github.io/Weather-Planner-privacy/1.jpg">
-    <meta property="og:site_name" content="Weather Planner 公式サイト">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS (CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        sky: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        },
-                        navy: '#1e293b',
-                    },
-                    fontFamily: {
-                        rounded: ['"M PLUS Rounded 1c"', 'sans-serif'],
-                        sans: ['"Noto Sans JP"', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { font-family: 'Noto Sans JP', sans-serif; }
-        h1, h2, h3, .font-rounded { font-family: 'M PLUS Rounded 1c', sans-serif; }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        .animate-float { animation: float 4s ease-in-out infinite; }
-    </style>
-</head>
-<body class="bg-gradient-to-b from-sky-50 via-white to-sky-50 text-slate-700 antialiased selection:bg-sky-200">
-
-    <!-- ヘッダー -->
-    <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-sky-100 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-sky-500 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md">☁️</div>
-                <span class="font-rounded font-bold text-lg md:text-xl text-sky-900">Weather Planner</span>
-            </div>
-            <a href="#download" class="bg-sky-500 hover:bg-sky-600 text-white font-medium px-4 py-2 rounded-full text-sm transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                ダウンロード
-            </a>
-        </div>
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="そらちゃん天気は、服装・傘・洗濯・花粉をまとめて確認できる、毎朝のための天気予報アプリです。" />
+    <title>そらちゃん天気｜毎朝の準備を、もっと楽しく</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="そらちゃん天気 ホーム">
+        <span class="brand-mark">☁</span><span>そらちゃん天気</span>
+      </a>
+      <a class="header-download" href="#download">無料でダウンロード</a>
     </header>
 
-    <!-- Heroセクション -->
-    <section class="pt-32 pb-20 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        <div class="flex-1 text-center md:text-left">
-            <div class="inline-block bg-sky-100 text-sky-800 font-medium px-4 py-1.5 rounded-full text-sm mb-6 shadow-sm font-rounded">
-                ✨ あなたの毎日に、小さな癒やしと確かな予報を
-            </div>
-            <h1 class="text-3xl md:text-5xl font-bold text-slate-800 leading-tight mb-6">
-                毎日のお天気を、<br>
-                もっと楽しく、<br class="hidden md:inline">
-                <span class="text-sky-600">もっと可愛く！</span>
-            </h1>
-            <p class="text-slate-600 text-base md:text-lg mb-8 leading-relaxed">
-                お天気マスコットの<strong>「そらちゃん」</strong>が、あなたの街の天候に合わせて優しくアドバイスを届ける、新しいスタイルの癒やし系お天気アプリです。<br>
-                傘の必要性も、洗濯日和も、今日の運勢だってこれ一つでバッチリ！
-            </p>
-            <div id="download" class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-                <a href="#" class="flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white px-6 py-3.5 rounded-2xl shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-0.5">
-                    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.5 1.5 0 0 1-.21-.806V2.62c0-.312.08-.605.21-.806zM15.208 13.416l2.073 2.074-11.494 6.643 9.421-8.717zM18.845 11.233l2.88 1.664a1.5 1.5 0 0 1 0 2.606l-2.88 1.664-1.547-1.547 1.547-4.387zM15.208 10.584L5.787 1.867l11.494 6.643-2.073 2.074z"/></svg>
-                    <div class="text-left">
-                        <div class="text-xs text-slate-300 uppercase leading-none">GET IT ON</div>
-                        <div class="text-lg font-bold leading-tight mt-0.5 font-sans">Google Play</div>
-                    </div>
-                </a>
-                <span class="text-xs text-slate-400">※全国47都道府県対応 / 基本無料</span>
-            </div>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">毎朝のための、やさしい天気予報</p>
+          <h1>今日の準備、<br /><em>もう迷わない。</em></h1>
+          <p class="lead">服装・傘・洗濯・花粉。<br />そらちゃんが、今日の空に合わせて教えてくれる。</p>
+          <div class="hero-actions">
+            <!-- Google Play の実URLに差し替えてください -->
+            <a class="play-button" href="#download" aria-label="Google Play からダウンロード">
+              <span class="play-triangle">▶</span><span><small>GET IT ON</small>Google Play</span>
+            </a>
+            <p class="free-note">無料・かんたん地域設定</p>
+          </div>
         </div>
-        <!-- Hero画像: 1.jpg -->
-        <div class="flex-1 flex justify-center">
-            <div class="relative w-72 md:w-80 animate-float">
-                <div class="absolute -inset-4 bg-sky-200/50 rounded-3xl blur-2xl -z-10"></div>
-                <img src="1.png" alt="ホーム画面" class="rounded-[2.5rem] w-full shadow-2xl border-4 border-white">
+        <div class="hero-art" aria-label="そらちゃん天気アプリのプレビュー">
+          <div class="sun sun-one"></div><div class="cloud cloud-one"></div>
+          <div class="phone hero-phone">
+            <!-- assets/screenshot-home.png を追加すると実スクリーンショットに差し替わります -->
+            <img class="real-shot" src="assets/screenshot-home.png" alt="そらちゃん天気のホーム画面" />
+            <div class="phone-fallback">
+              <div class="phone-top"><span>9:41</span><span>● ● ●</span></div>
+              <p>東京都 渋谷区⌄</p><strong>27°</strong><span class="weather">☀️ 晴れ</span>
+              <div class="weather-card"><span class="mini-sora">☁</span><div><b>今日は洗濯日和！</b><br /><small>紫外線対策も忘れずに</small></div></div>
+              <div class="hourly"><span>いま<br /><b>☀️</b><br />27°</span><span>12時<br /><b>☀️</b><br />29°</span><span>15時<br /><b>⛅</b><br />28°</span><span>18時<br /><b>☁️</b><br />25°</span></div>
             </div>
+          </div>
+          <!-- assets/character-sora.png に透過PNGを置くとキャラクターが表示されます -->
+          <img class="hero-character" src="assets/character-sora.png" alt="そらちゃん" />
+          <div class="character-fallback" aria-hidden="true"><span>☁</span><i>☺</i></div>
+          <p class="bubble">今日も、いい一日にしようね！</p>
         </div>
-    </section>
+      </section>
 
-    <!-- ゆるキャラ紹介セクション -->
-    <section class="py-20 bg-white border-y border-sky-100">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4">お天気マスコット「そらちゃん」が毎日を応援！</h2>
-            <p class="text-slate-600 max-w-2xl mx-auto mb-10">天気インデックスと連動して、紫外線、お洗濯、花粉、傘、服装など、その日の気象状況に応じてイラストと優しさいっぱいのアドバイスが変化します。</p>
-            
-            <!-- フレンズ集合画像: 1 (5).jpg -->
-            <div class="flex justify-center mb-12">
-                <img src="1 (5).jpg" alt="そらちゃんお天気フレンズ" class="rounded-[2rem] shadow-lg max-w-sm w-full border-4 border-sky-50">
-            </div>
+      <section class="proof band">
+        <p>朝の「どうしよう？」を、ひとつの画面ですっきり。</p>
+        <div class="proof-items"><span>☂️ 傘</span><span>👕 服装</span><span>🧺 洗濯</span><span>🌸 花粉</span><span>☀️ 紫外線</span></div>
+      </section>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-sky-50/70 p-8 rounded-3xl border border-sky-100 relative overflow-hidden group hover:shadow-lg transition-all">
-                    <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform">👕✨</div>
-                    <h3 class="font-bold text-lg text-slate-800 mb-2">お洗濯のタイミングを指南</h3>
-                    <p class="text-sm text-slate-600">「今日はお洗濯物がふかふかに乾くよ！」洗濯日和が一目でわかるから、家事の計画もバッチリ。</p>
-                </div>
-                <div class="bg-sky-50/70 p-8 rounded-3xl border border-sky-100 relative overflow-hidden group hover:shadow-lg transition-all">
-                    <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform">🥠🍀</div>
-                    <h3 class="font-bold text-lg text-slate-800 mb-2">タップで「お天気おみくじ」</h3>
-                    <p class="text-sm text-slate-600">カードをタップすると運勢を占うおみくじが引けます！毎朝の運試しやちょっと元気がほしいときに。</p>
-                </div>
-                <div class="bg-sky-50/70 p-8 rounded-3xl border border-sky-100 relative overflow-hidden group hover:shadow-lg transition-all">
-                    <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform">☀️☂️</div>
-                    <h3 class="font-bold text-lg text-slate-800 mb-2">傘や服装の目安がひと目で</h3>
-                    <p class="text-sm text-slate-600">「日差しが強いから帽子を忘れないでね」「傘は不要よ」など、お出かけ前の迷いをなくします。</p>
-                </div>
-            </div>
+      <section class="section intro">
+        <p class="eyebrow">WEATHER, MADE PERSONAL</p>
+        <h2>天気を見るだけで、<br />終わらせない。</h2>
+        <p class="section-lead">気温や雨の予報を見ても、朝は意外と迷うもの。<br />そらちゃん天気なら、毎日の暮らしに必要な答えを、見やすく・やさしく届けます。</p>
+      </section>
+
+      <section class="section feature-grid">
+        <article class="feature-card card-blue"><span class="feature-icon">☂️</span><p class="card-number">01</p><h3>傘、持っていく？</h3><p>雨の可能性をひと目で確認。出発前の迷いを減らします。</p></article>
+        <article class="feature-card card-yellow"><span class="feature-icon">👕</span><p class="card-number">02</p><h3>今日は何を着る？</h3><p>気温と天候に合わせて、服装選びをさりげなくサポート。</p></article>
+        <article class="feature-card card-mint"><span class="feature-icon">🧺</span><p class="card-number">03</p><h3>洗濯、していい日？</h3><p>空模様を見ながら、家事のタイミングも決めやすく。</p></article>
+        <article class="feature-card card-pink"><span class="feature-icon">🌸</span><p class="card-number">04</p><h3>花粉・紫外線も忘れずに</h3><p>季節の気になる情報も、毎日の準備と一緒にチェック。</p></article>
+      </section>
+
+      <section class="section showcase">
+        <div class="showcase-copy"><p class="eyebrow">SORA-CHAN'S ADVICE</p><h2>そらちゃんから、<br />今日のひとこと。</h2><p>晴れの日も、雨の日も。天気に合わせて変わるカードが、あなたの毎日にそっと寄り添います。</p><ul><li>天気と生活指数をまとめて確認</li><li>主要市区町村まで、地域を細かく設定</li><li>タップで楽しめる、今日のお天気おみくじ</li></ul></div>
+        <div class="shot-stack">
+          <!-- screenshot-card.png を実スクリーンショットに置き換え -->
+          <div class="phone shot-back"><img src="assets/screenshot-card.png" alt="そらちゃんお天気カード" /><div class="shot-placeholder">☀️<br /><b>今日は晴れ！</b><br /><small>お出かけ日和です</small></div></div>
+          <div class="phone shot-front"><img src="assets/screenshot-omikuji.png" alt="そらちゃんお天気おみくじ" /><div class="shot-placeholder omikuji">🥠<br /><b>今日のおみくじ</b><br /><small>小さな幸せを見つけよう</small></div></div>
         </div>
-    </section>
+      </section>
 
-    <!-- 使用シーン (スクリーンショット4枚ギャラリー) -->
-    <section class="py-20 max-w-6xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4">快適で美しい、こだわりのアプリ画面</h2>
-            <p class="text-slate-600">直感的でストレスのないモダンなUI。</p>
-        </div>
+      <section class="routine">
+        <div><p class="eyebrow">MORNING ROUTINE</p><h2>朝の通知で、<br />準備がすっと整う。</h2><p>設定した時間に、そらちゃんがその日の天気に合わせてお知らせ。忙しい朝にも、必要な情報だけをやさしく届けます。</p></div>
+        <div class="notification"><span class="notification-icon">☁</span><div><b>そらちゃん天気</b><small>いま</small><p>今日は午後から晴れ。傘はなくても大丈夫そうだよ！</p></div></div>
+      </section>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            <!-- スクショ1: ホーム画面 (1.jpg) -->
-            <div class="bg-white p-4 rounded-3xl shadow-md border border-sky-100 flex flex-col items-center hover:shadow-lg transition-shadow">
-                <img src="1 (2).png" alt="ホーム画面" class="w-full rounded-[1.5rem] mb-4 shadow-sm border border-sky-50">
-                <h4 class="font-bold text-sm text-slate-700">ひと目でわかる快適ホーム</h4>
-            </div>
-            <!-- スクショ2: おみくじ機能 (1 (4).jpg) -->
-            <div class="bg-white p-4 rounded-3xl shadow-md border border-sky-100 flex flex-col items-center hover:shadow-lg transition-shadow">
-                <img src="1 (5).png" alt="おみくじ機能" class="w-full rounded-[1.5rem] mb-4 shadow-sm border border-sky-50">
-                <h4 class="font-bold text-sm text-slate-700">楽しいおみくじ機能</h4>
-            </div>
-            <!-- スクショ3: 詳細データ (1 (2).jpg) -->
-            <div class="bg-white p-4 rounded-3xl shadow-md border border-sky-100 flex flex-col items-center hover:shadow-lg transition-shadow">
-                <img src="1 (3).png" alt="詳細データ" class="w-full rounded-[1.5rem] mb-4 shadow-sm border border-sky-50">
-                <h4 class="font-bold text-sm text-slate-700">信頼できる正確なデータ</h4>
-            </div>
-            <!-- スクショ4: 通知設定 (1 (3).jpg) -->
-            <div class="bg-white p-4 rounded-3xl shadow-md border border-sky-100 flex flex-col items-center hover:shadow-lg transition-shadow">
-                <img src="1 (4).png" alt="通知設定" class="w-full rounded-[1.5rem] mb-4 shadow-sm border border-sky-50">
-                <h4 class="font-bold text-sm text-slate-700">心地よい通知設定</h4>
-            </div>
-        </div>
-    </section>
-
-    <!-- 通知機能・安心設計セクション (広告なし記載を削除) -->
-    <section class="py-16 bg-gradient-to-r from-sky-600 to-sky-700 text-white my-10">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-6">必要なときだけ、あなたへ。安心のローカル設計。</h2>
-            <p class="text-sky-100 leading-relaxed max-w-2xl mx-auto mb-8">
-                外部への不要な通信や重いAI処理を行わず、端末内でスマートに処理を行います。<br>
-                個人情報の収集は一切なし。起動も一瞬で驚くほど軽快。<br>
-                毎朝7時、お出かけに必要な服装や傘の目安だけを、心地よいタイミングでお知らせします。
-            </p>
-            <div class="inline-flex flex-wrap justify-center gap-4 text-sm font-medium">
-                <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">🔒 個人情報収集ゼロ</span>
-                <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">⚡ サクサク軽快な動作</span>
-                <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">🔔 押し付けない行動提案通知</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- フッター -->
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-sky-500 rounded-lg flex items-center justify-center text-white font-bold text-md">☁️</div>
-                <span class="font-rounded font-bold text-lg text-white">Weather Planner</span>
-            </div>
-
-            <!-- リンク群 -->
-            <div class="flex flex-wrap justify-center gap-6 text-slate-300">
-                <a href="https://appbee1010-a11y.github.io/Weather-Planner-privacy/" class="hover:text-sky-400 transition-colors">プライバシーポリシー</a>
-                <a href="mailto:appbee1010@gmail.com" class="hover:text-sky-400 transition-colors">お問い合わせ</a>
-            </div>
-
-            <!-- SNSシェアボタン -->
-            <div class="flex items-center gap-4">
-                <span class="text-xs text-slate-500">シェア:</span>
-                <a href="https://twitter.com/intent/tweet?text=そらちゃんが毎日の天気と運勢を教えてくれる癒やし系お天気アプリ！%20%23WeatherPlanner&url=https://appbee1010-a11y.github.io/Weather-Planner-privacy/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-slate-800 hover:bg-sky-500 text-white rounded-full flex items-center justify-center transition-colors shadow-sm" title="Xでシェア">
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
-                <a href="https://social-plugins.line.me/lineit/share?url=https://appbee1010-a11y.github.io/Weather-Planner-privacy/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-slate-800 hover:bg-[#06C755] text-white rounded-full flex items-center justify-center transition-colors shadow-sm font-bold text-xs" title="LINEで送る">
-                    LINE
-                </a>
-            </div>
-        </div>
-        <div class="text-center mt-8 text-xs text-slate-600">
-            &copy; 2026 BeePub. All rights reserved. Weather data by Open-Meteo.com
-        </div>
-    </footer>
-
-</body>
+      <section class="download" id="download">
+        <div class="download-art"><div class="big-cloud">☁<i>☺</i></div><span class="sparkle a">✦</span><span class="sparkle b">✦</span></div>
+        <div><p class="eyebrow">LET'S START THE DAY</p><h2>今日のお出かけ準備を、<br />そらちゃんと。</h2><p>天気をもっと、あなたの毎日に近いものへ。</p><a class="play-button dark" href="https://play.google.com/store" target="_blank" rel="noopener"><span class="play-triangle">▶</span><span><small>GET IT ON</small>Google Play</span></a><small class="download-note">Google Playの実際のアプリURLに差し替えてください</small></div>
+      </section>
+    </main>
+    <footer><a class="brand" href="#top"><span class="brand-mark">☁</span><span>そらちゃん天気</span></a><p>© AppBee. All rights reserved.</p><a href="#">プライバシーポリシー</a></footer>
+  </body>
 </html>
