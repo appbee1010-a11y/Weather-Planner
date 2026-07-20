@@ -1,94 +1,392 @@
-:root{--ink:#17314e;--blue:#e6f5ff;--sky:#59b8ed;--accent:#ffb945;--cream:#fffaf0;--muted:#60748a}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:"Noto Sans JP",sans-serif;line-height:1.8}.site-header{height:80px;max-width:1180px;margin:auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:18px;color:var(--ink);font-weight:800;text-decoration:none;display:flex;gap:8px;align-items:center}.brand-mark{display:grid;place-items:center;background:#cceeff;color:#2697d3;width:32px;height:32px;border-radius:11px;font-size:20px;line-height:1}.header-download{font-size:14px;background:var(--ink);color:#fff;padding:9px 17px;border-radius:99px;text-decoration:none;font-weight:700}.hero{min-height:620px;padding:72px max(28px,calc((100vw - 1124px)/2));display:grid;grid-template-columns:1fr 1fr;align-items:center;overflow:hidden;background:linear-gradient(120deg,#f7fcff 10%,#e3f5ff 100%)}.eyebrow{font:700 12px "DM Sans",sans-serif;letter-spacing:.14em;color:#288fca;margin:0 0 15px}.hero h1,h2{line-height:1.28;letter-spacing:-.04em;margin:0;font-weight:800}.hero h1{font-size:clamp(42px,5vw,65px)}h1 em{font-style:normal;color:#169bd7}.lead{font-size:18px;margin:24px 0 30px;color:#3d5972}.play-button{background:#172b3e;color:white;border-radius:10px;display:inline-flex;align-items:center;gap:10px;padding:8px 16px;text-decoration:none;font-family:"DM Sans",sans-serif;font-size:19px;line-height:1.05}.play-button small{display:block;font-size:8px;letter-spacing:.08em}.play-triangle{font-size:22px;color:#56c4ec}.free-note{font-size:12px;color:#668097;margin:9px 0}.hero-art{position:relative;height:470px;max-width:470px;margin:auto;width:100%}.phone{position:relative;border:7px solid #1c3852;border-radius:29px;background:#fff;box-shadow:0 22px 40px #25677c2e;overflow:hidden}.hero-phone{width:245px;height:455px;position:absolute;top:8px;left:112px;z-index:2}.real-shot,.shot-stack img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}.real-shot[src$="screenshot-home.png"]{display:none}.phone-fallback{height:100%;padding:12px 16px;background:linear-gradient(#c7e9ff,#faffff 43%);text-align:center;font-size:11px;color:#34516c}.phone-top{display:flex;justify-content:space-between;font-size:9px}.phone-fallback>p{margin:25px 0 0}.phone-fallback>strong{font:700 65px "DM Sans",sans-serif;display:block}.weather{font-size:13px}.weather-card{background:#fff;border-radius:15px;box-shadow:0 7px 15px #6c9aae2b;display:flex;align-items:center;text-align:left;gap:10px;padding:12px;margin-top:25px}.mini-sora{font-size:37px;position:relative}.weather-card b{font-size:11px}.weather-card small{font-size:9px}.hourly{display:flex;background:#ffffffc7;border-radius:13px;justify-content:space-around;margin-top:13px;padding:10px 3px;font-size:9px}.hourly b{font-size:15px}.hero-character{position:absolute;width:180px;height:180px;object-fit:contain;right:0;bottom:8px;z-index:3}.hero-character[src$="character-sora.png"]{display:none}.character-fallback{position:absolute;right:12px;bottom:20px;background:#fff;box-shadow:0 13px 25px #4a91ac40;width:142px;height:100px;border-radius:60px;z-index:3;font-size:78px;line-height:.95;color:#d9edf6;text-align:center}.character-fallback i{position:absolute;left:57px;top:37px;color:#2b536d;font:23px sans-serif}.bubble{position:absolute;right:-10px;top:10px;z-index:4;padding:8px 14px;background:#fff;border-radius:13px;font-size:12px;box-shadow:0 5px 18px #55899c21}.sun{position:absolute;width:68px;height:68px;border-radius:50%;background:#ffca55;right:18px;top:40px}.cloud{position:absolute;width:90px;height:34px;background:#fff;border-radius:40px;left:24px;top:64px}.cloud:before,.cloud:after{content:"";position:absolute;background:#fff;border-radius:50%}.cloud:before{width:46px;height:46px;left:16px;bottom:0}.cloud:after{width:37px;height:37px;left:49px;bottom:0}.band{padding:25px 28px;background:#17314e;color:#fff;text-align:center}.band p{margin:0;font-weight:700}.proof-items{display:flex;justify-content:center;gap:28px;margin-top:8px;color:#d5edf9;font-size:14px}.section{max-width:1124px;margin:auto;padding:110px 28px}.intro{text-align:center}.intro h2,.showcase h2,.routine h2,.download h2{font-size:clamp(31px,4vw,48px)}.section-lead{color:var(--muted);margin:23px auto 0;max-width:660px}.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-top:0}.feature-card{min-height:277px;border-radius:24px;padding:26px 22px;position:relative}.feature-icon{font-size:36px}.card-number{font:600 12px "DM Sans";position:absolute;right:22px;top:21px;color:#678399}.feature-card h3{font-size:18px;line-height:1.5;margin:55px 0 8px}.feature-card p:last-child{font-size:13px;color:#50687d;margin:0;line-height:1.8}.card-blue{background:#e0f4fe}.card-yellow{background:#fff1d2}.card-mint{background:#e1f8ed}.card-pink{background:#fee9ee}.showcase{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;background:#fffaf0;max-width:none;padding-left:max(28px,calc((100vw - 1068px)/2));padding-right:max(28px,calc((100vw - 1068px)/2))}.showcase-copy>p:not(.eyebrow),.routine p,.download p{color:#557087}.showcase ul{padding-left:0;list-style:none;margin-top:25px;font-size:14px}.showcase li{margin:11px 0}.showcase li:before{content:"✓";color:#e79218;font-weight:800;margin-right:9px}.shot-stack{height:430px;position:relative}.shot-stack .phone{width:210px;height:385px}.shot-back{position:absolute;left:45px;top:0;transform:rotate(-7deg)}.shot-front{position:absolute;left:195px;top:37px;transform:rotate(7deg)}.shot-stack img[src$="screenshot-card.png"],.shot-stack img[src$="screenshot-omikuji.png"]{display:none}.shot-placeholder{height:100%;display:flex;flex-direction:column;justify-content:center;text-align:center;background:linear-gradient(#d9f3ff,#fff);font-size:44px}.shot-placeholder b{font-size:15px;margin-top:20px}.shot-placeholder small{font-size:11px}.omikuji{background:linear-gradient(#fff2d3,#fff)}.routine{padding:100px max(28px,calc((100vw - 1068px)/2));background:#edf8ff;display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}.notification{padding:18px;background:white;border-radius:18px;display:flex;gap:13px;box-shadow:0 15px 33px #376d8426}.notification-icon{background:#dff4ff;border-radius:13px;width:45px;height:45px;display:grid;place-items:center;font-size:26px}.notification b{font-size:13px}.notification small{font-size:11px;color:#7c95a5;margin-left:7px}.notification p{font-size:13px;line-height:1.6;margin:8px 0 0;color:#39556c}.download{background:#ffca62;padding:75px max(28px,calc((100vw - 1068px)/2));display:grid;grid-template-columns:.65fr 1fr;gap:40px;align-items:center}.download .eyebrow{color:#946314}.download p{margin:15px 0 23px}.dark{background:#17314e}.download-note{display:block;color:#765415;margin-top:10px;font-size:11px}.download-art{text-align:center;position:relative}.big-cloud{font-size:175px;line-height:1;color:#fff;filter:drop-shadow(0 13px 10px #c28c212b);position:relative}.big-cloud i{position:absolute;font:42px sans-serif;top:78px;left:calc(50% - 19px);color:#38617d}.sparkle{position:absolute;color:white;font-size:28px}.sparkle.a{top:12px;left:18%}.sparkle.b{bottom:5px;right:16%}footer{max-width:1124px;padding:36px 28px;margin:auto;display:flex;align-items:center;gap:24px;color:#6b8295;font-size:12px}footer p{margin:0;flex:1}footer a:last-child{color:#6b8295}@media(max-width:780px){.site-header{height:68px;padding:0 18px}.header-download{font-size:12px;padding:8px 11px}.hero{grid-template-columns:1fr;padding-top:55px;text-align:center}.hero-art{margin-top:25px;transform:scale(.88);transform-origin:top;height:420px}.proof-items{gap:9px;flex-wrap:wrap;font-size:12px}.section{padding:78px 22px}.feature-grid{grid-template-columns:1fr 1fr;padding-top:0;gap:11px}.feature-card{min-height:225px;padding:18px 15px}.feature-card h3{font-size:15px;margin-top:35px}.feature-card p:last-child{font-size:11px}.showcase,.routine,.download{grid-template-columns:1fr;gap:35px;padding:70px 22px}.showcase-copy{order:0}.shot-stack{height:385px;transform:scale(.86);transform-origin:left top;margin-bottom:-45px}.shot-back{left:5px}.shot-front{left:145px}.routine{gap:30px}.download-art{order:2}.big-cloud{font-size:145px}footer{padding:30px 20px;flex-wrap:wrap;gap:12px}footer p{order:3;flex-basis:100%}}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="そらちゃん天気は、服装・傘・洗濯・花粉をまとめて確認できる、毎朝のための天気予報アプリです。" />
-    <title>そらちゃん天気｜毎朝の準備を、もっと楽しく</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="そらちゃん天気 ホーム">
-        <span class="brand-mark">☁</span><span>そらちゃん天気</span>
-      </a>
-      <a class="header-download" href="#download">無料でダウンロード</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>そらちゃん天気｜今日の準備、もう迷わない。</title>
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-blue: #0ea5e9;
+            --dark-blue: #1e293b;
+            --bg-light: #f0f9ff;
+            --bg-yellow: #fefce8;
+            --bg-orange: #fbbf24;
+            --text-main: #334155;
+            --text-muted: #64748b;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        
+        /* Typography */
+        h1, h2 {
+            color: var(--dark-blue);
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+        .sub-tag {
+            color: var(--primary-blue);
+            font-size: 0.9rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Phone Mockup Style for Screenshots */
+        .mockup-img {
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border: 8px solid #fff;
+            max-height: 600px;
+            object-fit: cover;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--dark-blue);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-download {
+            background: var(--dark-blue);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%);
+            padding: 80px 0;
+        }
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-text h1 {
+            font-size: 2.8rem;
+        }
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+        .hero-image {
+            flex: 1;
+            text-align: right;
+            position: relative;
+        }
+        .play-badge {
+            background: #000;
+            color: #fff;
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* Dark Banner */
+        .dark-banner {
+            background: var(--dark-blue);
+            color: #fff;
+            text-align: center;
+            padding: 25px 20px;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+        .dark-banner span {
+            margin: 0 10px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            text-align: center;
+            background: #fff;
+        }
+        .features h2 {
+            font-size: 2.2rem;
+        }
+        .features p {
+            color: var(--text-muted);
+            margin-bottom: 50px;
+        }
+        
+        /* 4 Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        .feature-card {
+            padding: 30px 20px;
+            border-radius: 16px;
+            text-align: left;
+            position: relative;
+        }
+        .feature-card h3 {
+            margin: 15px 0 10px;
+            font-size: 1.1rem;
+        }
+        .feature-card p {
+            font-size: 0.85rem;
+            margin: 0;
+        }
+        .feature-card .num {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+        .c-purple { background: #f3e8ff; color: #6b21a8; }
+        .c-yellow { background: #fef9c3; color: #854d0e; }
+        .c-green { background: #dcfce7; color: #166534; }
+        .c-pink { background: #fce7f3; color: #9d174d; }
+
+        /* Split Section (Advice & Routine) */
+        .split-section {
+            padding: 80px 0;
+        }
+        .split-section.bg-yellow { background: var(--bg-yellow); }
+        .split-section.bg-blue { background: var(--bg-light); }
+        .split-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        .split-text {
+            flex: 1;
+        }
+        .split-text h2 {
+            font-size: 2.2rem;
+        }
+        .split-text ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .split-text li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            color: var(--text-muted);
+        }
+        .split-text li::before {
+            content: "✓";
+            color: var(--primary-blue);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .split-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: var(--bg-orange);
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .cta p {
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #fff;
+            padding: 30px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+        }
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero .container, .split-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text h1 { font-size: 2rem; }
+            .split-text li { text-align: left; }
+            .split-text h2 { font-size: 1.8rem; }
+            footer { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">☁️ そらちゃん天気</div>
+        <a href="#download" class="btn-download">無料でダウンロード</a>
     </header>
 
-    <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">毎朝のための、やさしい天気予報</p>
-          <h1>今日の準備、<br /><em>もう迷わない。</em></h1>
-          <p class="lead">服装・傘・洗濯・花粉。<br />そらちゃんが、今日の空に合わせて教えてくれる。</p>
-          <div class="hero-actions">
-            <!-- Google Play の実URLに差し替えてください -->
-            <a class="play-button" href="#download" aria-label="Google Play からダウンロード">
-              <span class="play-triangle">▶</span><span><small>GET IT ON</small>Google Play</span>
-            </a>
-            <p class="free-note">無料・かんたん地域設定</p>
-          </div>
-        </div>
-        <div class="hero-art" aria-label="そらちゃん天気アプリのプレビュー">
-          <div class="sun sun-one"></div><div class="cloud cloud-one"></div>
-          <div class="phone hero-phone">
-            <!-- assets/screenshot-home.png を追加すると実スクリーンショットに差し替わります -->
-            <img class="real-shot" src="assets/screenshot-home.png" alt="そらちゃん天気のホーム画面" />
-            <div class="phone-fallback">
-              <div class="phone-top"><span>9:41</span><span>● ● ●</span></div>
-              <p>東京都 渋谷区⌄</p><strong>27°</strong><span class="weather">☀️ 晴れ</span>
-              <div class="weather-card"><span class="mini-sora">☁</span><div><b>今日は洗濯日和！</b><br /><small>紫外線対策も忘れずに</small></div></div>
-              <div class="hourly"><span>いま<br /><b>☀️</b><br />27°</span><span>12時<br /><b>☀️</b><br />29°</span><span>15時<br /><b>⛅</b><br />28°</span><span>18時<br /><b>☁️</b><br />25°</span></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <span class="sub-tag">毎日のための、やさしい天気予報</span>
+                <h1>今日の準備、<br>もう迷わない。</h1>
+                <p>服装・傘・洗濯・花粉。<br>そらちゃんが、今日の空に合わせて教えてくれる。</p>
+                <a href="#download" class="play-badge">GET IT ON<br>Google Play</a>
+                <p style="font-size: 0.75rem; margin-top: 10px; opacity: 0.7;">無料・かんたん初期設定</p>
             </div>
-          </div>
-          <!-- assets/character-sora.png に透過PNGを置くとキャラクターが表示されます -->
-          <img class="hero-character" src="assets/character-sora.png" alt="そらちゃん" />
-          <div class="character-fallback" aria-hidden="true"><span>☁</span><i>☺</i></div>
-          <p class="bubble">今日も、いい一日にしようね！</p>
+            <div class="hero-image">
+                <!-- 添付画像：ホーム画面のUI -->
+                <img src="home.png" alt="そらちゃん天気 ホーム画面" class="mockup-img">
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="proof band">
-        <p>朝の「どうしよう？」を、ひとつの画面ですっきり。</p>
-        <div class="proof-items"><span>☂️ 傘</span><span>👕 服装</span><span>🧺 洗濯</span><span>🌸 花粉</span><span>☀️ 紫外線</span></div>
-      </section>
+    <!-- Dark Banner -->
+    <div class="dark-banner">
+        朝の「どうしよう？」を、ひとつの画面ですっきり。<br>
+        <span>☔ 傘</span> | <span>👕 服装</span> | <span>🧺 洗濯</span> | <span>🌸 花粉</span> | <span>☀️ 紫外線</span>
+    </div>
 
-      <section class="section intro">
-        <p class="eyebrow">WEATHER, MADE PERSONAL</p>
-        <h2>天気を見るだけで、<br />終わらせない。</h2>
-        <p class="section-lead">気温や雨の予報を見ても、朝は意外と迷うもの。<br />そらちゃん天気なら、毎日の暮らしに必要な答えを、見やすく・やさしく届けます。</p>
-      </section>
-
-      <section class="section feature-grid">
-        <article class="feature-card card-blue"><span class="feature-icon">☂️</span><p class="card-number">01</p><h3>傘、持っていく？</h3><p>雨の可能性をひと目で確認。出発前の迷いを減らします。</p></article>
-        <article class="feature-card card-yellow"><span class="feature-icon">👕</span><p class="card-number">02</p><h3>今日は何を着る？</h3><p>気温と天候に合わせて、服装選びをさりげなくサポート。</p></article>
-        <article class="feature-card card-mint"><span class="feature-icon">🧺</span><p class="card-number">03</p><h3>洗濯、していい日？</h3><p>空模様を見ながら、家事のタイミングも決めやすく。</p></article>
-        <article class="feature-card card-pink"><span class="feature-icon">🌸</span><p class="card-number">04</p><h3>花粉・紫外線も忘れずに</h3><p>季節の気になる情報も、毎日の準備と一緒にチェック。</p></article>
-      </section>
-
-      <section class="section showcase">
-        <div class="showcase-copy"><p class="eyebrow">SORA-CHAN'S ADVICE</p><h2>そらちゃんから、<br />今日のひとこと。</h2><p>晴れの日も、雨の日も。天気に合わせて変わるカードが、あなたの毎日にそっと寄り添います。</p><ul><li>天気と生活指数をまとめて確認</li><li>主要市区町村まで、地域を細かく設定</li><li>タップで楽しめる、今日のお天気おみくじ</li></ul></div>
-        <div class="shot-stack">
-          <!-- screenshot-card.png を実スクリーンショットに置き換え -->
-          <div class="phone shot-back"><img src="assets/screenshot-card.png" alt="そらちゃんお天気カード" /><div class="shot-placeholder">☀️<br /><b>今日は晴れ！</b><br /><small>お出かけ日和です</small></div></div>
-          <div class="phone shot-front"><img src="assets/screenshot-omikuji.png" alt="そらちゃんお天気おみくじ" /><div class="shot-placeholder omikuji">🥠<br /><b>今日のおみくじ</b><br /><small>小さな幸せを見つけよう</small></div></div>
+    <!-- Features Section -->
+    <section class="features container">
+        <span class="sub-tag">WEATHER, MADE PERSONAL</span>
+        <h2>天気を見るだけで、<br>終わらせない。</h2>
+        <p>気温や雨の予報を見ても、朝は意外と迷うもの。<br>そらちゃん天気なら、毎日の暮らしに必要な答えを、見やすく・やさしく届けます。</p>
+        
+        <div class="cards-grid">
+            <div class="feature-card c-purple">
+                <span class="num">01</span>
+                <h3>傘、持っていく？</h3>
+                <p>雨の可能性をひと目で確認。突然の雨の心配を減らします。</p>
+            </div>
+            <div class="feature-card c-yellow">
+                <span class="num">02</span>
+                <h3>今日は何を着る？</h3>
+                <p>気温と体感に合わせて、服装選びをさりげなくサポート。</p>
+            </div>
+            <div class="feature-card c-green">
+                <span class="num">03</span>
+                <h3>洗濯、していい日？</h3>
+                <p>空模様を見ながら、家事のタイミングも決めやすく。</p>
+            </div>
+            <div class="feature-card c-pink">
+                <span class="num">04</span>
+                <h3>花粉・紫外線も忘れずに</h3>
+                <p>季節の気になる情報も、明日のお天気と一緒にチェック。</p>
+            </div>
         </div>
-      </section>
+        
+        <!-- 添付画像：詳細カード画面 -->
+        <img src="card.png" alt="詳細カード機能" class="mockup-img" style="max-height: 500px; display: block; margin: 0 auto;">
+    </section>
 
-      <section class="routine">
-        <div><p class="eyebrow">MORNING ROUTINE</p><h2>朝の通知で、<br />準備がすっと整う。</h2><p>設定した時間に、そらちゃんがその日の天気に合わせてお知らせ。忙しい朝にも、必要な情報だけをやさしく届けます。</p></div>
-        <div class="notification"><span class="notification-icon">☁</span><div><b>そらちゃん天気</b><small>いま</small><p>今日は午後から晴れ。傘はなくても大丈夫そうだよ！</p></div></div>
-      </section>
+    <!-- Advice Section (Omikuji) -->
+    <section class="split-section bg-yellow">
+        <div class="container split-container">
+            <div class="split-text">
+                <span class="sub-tag">SORA-CHAN'S ADVICE</span>
+                <h2>そらちゃんから、<br>今日のひとこと。</h2>
+                <p>晴れの日も、雨の日も。天気に合わせて変わるカードが、あなたの毎日にそっと寄り添います。</p>
+                <ul>
+                    <li>天気と生活情報をまとめて確認</li>
+                    <li>全国市区町村まで、地域を細かく設定</li>
+                    <li>タップで楽しめる、今日のお天気おみくじ</li>
+                </ul>
+            </div>
+            <div class="split-image">
+                <!-- 添付画像：おみくじ画面 -->
+                <img src="omikuji.png" alt="お天気おみくじ" class="mockup-img">
+            </div>
+        </div>
+    </section>
 
-      <section class="download" id="download">
-        <div class="download-art"><div class="big-cloud">☁<i>☺</i></div><span class="sparkle a">✦</span><span class="sparkle b">✦</span></div>
-        <div><p class="eyebrow">LET'S START THE DAY</p><h2>今日のお出かけ準備を、<br />そらちゃんと。</h2><p>天気をもっと、あなたの毎日に近いものへ。</p><a class="play-button dark" href="https://play.google.com/store" target="_blank" rel="noopener"><span class="play-triangle">▶</span><span><small>GET IT ON</small>Google Play</span></a><small class="download-note">Google Playの実際のアプリURLに差し替えてください</small></div>
-      </section>
-    </main>
-    <footer><a class="brand" href="#top"><span class="brand-mark">☁</span><span>そらちゃん天気</span></a><p>© AppBee. All rights reserved.</p><a href="#">プライバシーポリシー</a></footer>
-  </body>
+    <!-- Morning Routine Section -->
+    <section class="split-section bg-blue">
+        <div class="container split-container">
+            <div class="split-image" style="order: -1;">
+                <!-- 添付画像：そらちゃんとお天気フレンズ -->
+                <img src="sora.png" alt="そらちゃんとお天気フレンズ" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-height: 450px;">
+            </div>
+            <div class="split-text">
+                <span class="sub-tag">MORNING ROUTINE</span>
+                <h2>朝の通知で、<br>準備がすっと整う。</h2>
+                <p>設定した時間に、そらちゃんがその日の天気に合わせてお知らせ。忙しい朝にも、必要な情報だけをやさしく届けます。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="download">
+        <span class="sub-tag" style="color: #854d0e;">LET'S START THE DAY</span>
+        <h2>今日のお出かけ準備を、<br>そらちゃんと。</h2>
+        <p>天気をもっと、あなたの毎日に近いものへ。</p>
+        <a href="#" class="play-badge">GET IT ON<br>Google Play</a>
+        <p style="font-size: 0.8rem; margin-top: 15px; opacity: 0.8; font-weight: normal;">Google Playの実際のアプリURLに差し替えてください</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo" style="font-size: 1rem;">☁️ そらちゃん天気 <span style="font-size: 0.8rem; margin-left: 10px; font-weight: normal;">© AppBee. All rights reserved.</span></div>
+        <div class="footer-links">
+            <a href="https://appbee1010-a11y.github.io/Weather-Planner-privacy/" target="_blank">プライバシーポリシー</a>
+        </div>
+    </footer>
+
+</body>
 </html>
